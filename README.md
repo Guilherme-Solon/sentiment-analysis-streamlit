@@ -47,3 +47,11 @@ Desenvolver uma aplicação funcional de Ciência de Dados capaz de:
 
 ```bash
 !pip install -q streamlit pyngrok nltk matplotlib seaborn
+
+!ngrok config add-authtoken SEU_TOKEN_AQUI
+
+!nohup streamlit run app.py --server.port 8501 &
+
+from pyngrok import ngrok
+public_url = ngrok.connect(8501)
+print(public_url)
